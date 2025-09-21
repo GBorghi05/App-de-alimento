@@ -6,7 +6,7 @@ export default function Hs() {
   return (
     <section
       className="relative bg-cover bg-center h-[90vh] flex items-center"
-      style={{ backgroundImage: "url('/src/assets/bg-food.jpg')" }}
+      style={{ backgroundImage: "url('/imgs/bg-food.jpg')" }}
     >
       <div className="absolute inset-0 bg-black/50"></div>
 
