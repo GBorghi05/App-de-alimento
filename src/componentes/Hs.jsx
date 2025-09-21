@@ -6,7 +6,7 @@ export default function Hs() {
   return (
     <section
       className="relative bg-cover bg-center h-[90vh] flex items-center"
-      style={{ backgroundImage: "url('./imgs/bg-food.jpg')" }}
+      style={{ backgroundImage: "url('/imgs/bg-food.jpg')" }}
     >
       <div className="absolute inset-0 bg-black/50"></div>
 
@@ -24,7 +24,7 @@ export default function Hs() {
           onClick={handleDownload}
           className="bg-pink-600 hover:bg-pink-700 px-6 py-3 rounded-full font-semibold shadow-lg transition"
         >
-          Download App 📲
+          Download App
         </button>
       </div>
     </section>
