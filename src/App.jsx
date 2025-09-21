@@ -1,6 +1,6 @@
-import Header from "./componentes/header";
-import Form from "./componentes/form";
-import Footer from "./componentes/footer";
+import Header from "./componentes/Header";
+import Form from "./componentes/Form";
+import Footer from "./componentes/Footer";
 
 export default function App() {
   return (
@@ -9,6 +9,5 @@ export default function App() {
       <Form />
       <Footer />
     </div>
-
   );
 }
