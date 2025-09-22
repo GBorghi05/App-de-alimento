@@ -1,8 +1,6 @@
-// Dentro de src/componentes/Funcionalidades.jsx
-
 import React from 'react';
 
-// --- Ícones ---
+// --- Ícones (incluídos para o componente ser independente) ---
 const SearchIcon = () => ( <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg> );
 const FilterIcon = () => ( <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L16 11.414V16a1 1 0 01-.293.707l-2 2A1 1 0 0113 18v-1.586l-3.707-3.707A1 1 0 019 12V6.414L3.293 4.707A1 1 0 013 4z" /></svg> );
 const ClockIcon = () => ( <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> );
@@ -29,17 +27,28 @@ export default function Funcionalidades() {
   return (
     <section className="py-16 sm:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
+        
+        <div className="text-center mb-12 md:mb-20">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">Funcionalidades do Aplicativo</h2>
           <p className="mt-4 text-lg text-gray-600">Conheça as ferramentas que tornam o nosso o melhor app de delivery.</p>
         </div>
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-          <div className="space-y-10">
+
+        {/* --- LAYOUT RESPONSIVO ---
+          - flex-col-reverse: Inverte a ordem no mobile (imagem em cima, texto embaixo)
+          - md:flex-row: Volta para o modo lado a lado em telas maiores
+        */}
+        <div className="flex flex-col-reverse md:flex-row gap-12 md:gap-16 items-center">
+          
+          {/* Coluna da Esquerda: Funcionalidades */}
+          <div className="md:w-1/2 space-y-10">
             {features.map((feature, index) => <FeatureItem key={index} {...feature} />)}
           </div>
-          <div className="flex justify-center">
-             <div className="w-80 h-[550px] bg-gray-200/50 rounded-[40px] shadow-2xl p-4 border-8 border-gray-100"></div>
+          
+          {/* Coluna da Direita: Mockup */}
+          <div className="md:w-1/2 flex justify-center">
+             <div className="w-72 sm:w-80 h-[500px] sm:h-[550px] bg-gray-200/50 rounded-[40px] shadow-2xl p-4 border-8 border-gray-100"></div>
           </div>
+
         </div>
       </div>
     </section>
